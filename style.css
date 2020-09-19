@@ -1,0 +1,472 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav-list{
+    display:flex;
+    list-style: none;
+    transform: translateX(50px);
+}
+nav{
+    padding-top:60px !important;
+}
+.nav-list  li  a {
+    color: rgba(254, 255, 255, 0.6);
+
+}
+
+.logo-box{
+    width: 150px;
+    height: 53px;
+    margin:1rem;
+}
+.logo-image{
+    width:100%;
+    height:100%;
+}
+.nav-link{
+    position: relative;
+    font-size:18px;
+}
+.nav-link::after{
+    content: '';
+    position:absolute;
+    width:0%;
+    bottom:0px;
+    height:0px;
+    left:15%;
+    border-bottom: 2px solid #fff;
+    transition:1s;
+}
+.nav-link:active::after{
+    width:100% !important;
+    color:#fff !important;
+}
+.nav-link:hover ,  .nav-link:active{
+    color:#fff;
+}
+.nav-link:hover::after{
+ width:70%;
+}
+
+.section1{
+    width:100%;
+    height:100vh;
+    background:url('./assets/images/Rectangle\ 1.svg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.section1-b{
+    background-color:rgba(21, 37, 42, 0.75) ;
+    width:100%;
+    height:100vh;
+}
+#animation{
+    margin:auto;
+    position: relative;
+    text-align: center;
+    margin-top:25vh;
+    z-index: 1;
+}
+#animation span {
+    transform:uppercase;
+    color: #FEFFFF;
+    font-weight: bold;
+    font-size: 60px;
+    display: inline-block;
+    position:relative;   
+    animation-name:intro-anime;
+    animation-timing-function: ease-in-out; 
+    animation-duration:2.5s ;  
+    animation-delay:calc( 1s + (0.08s * var(--i)));
+    animation-iteration-count:1;
+}
+@keyframes intro-anime{
+    0%{
+        transform: translateY(70px);
+        display: none ;
+        visibility: hidden;
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        visibility: visible;
+    }
+}
+.intro-animation{
+    width:100%;
+    height:0px;
+    position: absolute;
+    width:100%;
+    transition: 1s;
+    z-index: 99;
+    background-color:rgb(21, 37, 42) ;
+    animation: 1s ease-in-out 1;
+}
+
+@keyframes intro-animation {
+    0%{
+       height: 100vh;
+    }
+   50%{
+       height: 100vh;
+   }
+       100%{
+           
+           height:0px;
+           
+       }
+   }
+.intro-animation2{
+    position: absolute;
+    width:100%;
+    height:0px;
+    transition: 1s;
+    z-index:100;
+    background-color:rgb(15, 26, 29) ;
+    animation: 1s ease-in-out 1;
+}
+@keyframes intro-animation2 {
+    0%{
+        height: 100vh;
+    }
+    50%{
+        height:0px; 
+     }
+    100%{
+        display:none !important;
+        height:0px;
+    }
+}
+.hire-btn{
+    width:160px;
+    font-size: 18px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #BC986A;
+    border: none;
+    border-radius: 0px;
+    outline:none;
+    color:#fff;
+    transition: 1s;
+    z-index: 102;
+    border: 1px solid #FEFFFF;
+    animation-name:btn-anime;
+    animation-timing-function: ease-in-out; 
+    animation-duration:3.5s ;  
+    animation-delay:.1s;
+    animation-iteration-count:1;
+}
+.hire-btn:hover{
+    background-color:#8a6c46; 
+    color:#fff;
+}
+
+@keyframes btn-anime{
+    0%{
+        transform: translateY(70px);
+        display: none !important;
+        visibility: hidden;
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        display: none;
+    }
+}
+.about{
+    padding: 40px !important;
+}
+
+.about h3{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color:#1F252A;
+}
+.about p{
+    font-size: 20px;
+    font-weight: 300 !important;
+    margin-top: 30px;
+    color: #1F252A;
+}
+.about h6{
+    font-size: 20px;
+    font-weight:500 !important;
+}
+.about img{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.portfolio{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.portfolio h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color:#1F252A;
+}
+.portfolio{
+    min-height:400px;
+}
+.portfolio .row{
+    margin-top: 100px !important;
+    min-height:400px;
+}
+.portfolio p{
+    text-align: center;
+    color: #1F2A25;
+    font-size: 16px;
+    line-height: 18px;
+}
+.portfolio img{
+    width:100%;
+
+}
+.portfolio .img1 , .img2 , .img3 , .img4{
+    margin:auto;
+    margin-top: 0px;
+    margin-bottom:20px;
+    position: relative;
+    max-width: 300px;
+    width: calc(100% - 180px) !important;
+}
+
+.port-anime-1{
+    width: 90%;
+    background: #1F252A;
+    position: absolute;
+    left:16px;
+    right:0px;
+    margin: 0px;
+    animation: port-anime-1 2s ease-in-out 1;
+}
+@keyframes port-anime-1{
+    0%{
+        height:0px;
+        top:0;
+    }
+    50%{
+        height:100%;
+        bottom:0;
+    }
+    
+    100%{
+        height:0px;
+        bottom: 0;
+    }
+}
+
+.port-anime-2{
+    width: 90%;
+    left: 16px;
+    background: #1F252A;
+    height:0;
+    position: absolute;
+    animation: port-anime-2 2s ease-in-out 1;
+ 
+   
+}
+.port-anime-3{
+    width: 90%;
+    left:16px;
+    background: #1F252A;
+    height: 0;
+    position: absolute;
+    animation: port-anime-1 2s ease-in-out 1;
+
+}.port-anime-4{
+    width: 90%;
+    left:16px;
+    background: #1F252A;
+    height:0;
+    position: absolute;
+    animation: port-anime-2 2s ease-in-out 1;
+
+}
+.packages{
+
+    padding:40px;
+}
+.packages > h3{
+    font-size:35px ;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.package{
+    background-color: #BC986A; 
+    margin-top:30px;  
+    display:flex;
+    margin: 20px;
+    color: #FEFFFF;
+}
+.package{
+    max-width:540px;
+    max-height:350px;
+}
+.package h3{
+    font-size:21px;
+    padding-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+.package p{
+    line-height: 30px;
+    padding: 20px;
+    text-align: center;
+}
+.package-container{
+    display: flex;
+    justify-content:center;
+}
+@keyframes port-anime-2{
+    0%{
+        height:0px;
+        bottom: 0;
+    }
+    50%{
+        height:100%;
+    }
+    
+    100%{
+        height:0px;
+        top: 0;
+    }
+}
+@media (min-width:1000px){
+    .nav-list{
+        margin-right: 70px;
+    }
+    .about p{
+        padding-right:50px !important ;
+    }
+    .img1{
+        margin-top: 150px !important;
+        margin-bottom: -150px !important;
+    }
+    .img3{
+        margin-top: 150px;
+        margin-bottom: -150px !important;
+    }
+    .portfolio{
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom:200px;
+    }
+    .portfolio .img1 , .img2 , .img3 , .img4{
+        padding-left:30px;
+        padding-right:30px;
+    }
+}
+@media (max-width: 1000px){
+    .lg-scn-nav{
+        display:none;
+    }
+    #animation span{
+        font-size: 48px;
+    }
+    .hire-btn{
+        width:120px;
+        font-size: 16px;
+    }
+    .about p{
+        font-size: 18px;
+    }
+    
+}
+@media(max-width:560px){
+    #animation span{
+        font-size: 28px !important;
+    }
+    .hire-btn{
+        width:100px;
+        font-size: 16px;
+    }
+    .logo-box{
+        width:80px;
+        margin-left: 0px !important;
+        padding-top: 0px !important;
+    }
+    .about p , .about h6{
+        font-size: 16px;
+    }
+    .portfolio .img1 , .img2 , .img3 , .img4{
+        max-width: 300px;
+        width: 100% !important;
+    }
+    .portfolio .row{
+        margin-top:30px !important;
+    }
+
+    .package  h3{
+        font-size: 14px;
+    }
+    .package  p{
+        font-size: 11px;
+        padding: 0px;
+        padding-top: 5px;
+        line-height:18px;
+    }
+    .package{
+        max-width:330px;
+        height:250px;
+        min-height: 130px;
+    }
+    .package-card{
+        padding: 5px !important;
+    }
+}
+@media (max-width:350px){
+         #animation span{
+        font-size: 18px !important;
+        }
+       .hire-btn{
+            font-size:14px;
+        }
+    
+        .package  h3{
+            font-size: 14px;
+        }
+        .package  p{
+            font-size: 11px;
+            padding: 0px;
+            padding-top: 5px;
+            line-height:15px;
+            padding-bottom: 0px;
+        }
+        .package{
+            max-width:330px;
+            height: 200px;
+            min-height: 200px;
+        }
+        .package-card{
+            padding: 5px !important;
+        }
+}
