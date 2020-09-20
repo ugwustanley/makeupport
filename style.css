@@ -318,30 +318,44 @@ nav{
 .packages > h3{
     font-size:35px ;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
+}
+.package img{
+    padding-top: 15%;
+    padding-bottom: 15%;
+    transform: translateX(40px);
+}
+.package .img-box{
+    width: 100% !important;
+    background:linear-gradient(to left  ,#3AAFA9  60% , #fff 40%)
+}
+.package-card{
+    background: #3AAFA9; 
 }
 .package{
-    background-color: #BC986A; 
+    
     margin-top:30px;  
     display:flex;
     margin: 20px;
     color: #FEFFFF;
 }
 .package{
-    max-width:540px;
-    max-height:350px;
+    max-width:550px;
+    height:330px;
 }
 .package h3{
-    font-size:21px;
+    font-size:22px;
     padding-top: 20px;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
+    padding-left: 20px;
 }
 .package p{
-    line-height: 30px;
+    line-height: 25px;
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
+
 .package-container{
     display: flex;
     justify-content:center;
@@ -436,11 +450,17 @@ nav{
     }
     .package{
         max-width:330px;
-        height:250px;
+        height:200px;
         min-height: 130px;
     }
     .package-card{
-        padding: 5px !important;
+        padding: 10px !important;
+    }
+    .package img{
+        transform: translateX(0px);
+    }
+    .package h3{
+        padding-left: 0px;
     }
 }
 @media (max-width:350px){
@@ -455,7 +475,7 @@ nav{
             font-size: 14px;
         }
         .package  p{
-            font-size: 11px;
+            font-size: 10px;
             padding: 0px;
             padding-top: 5px;
             line-height:15px;
@@ -463,10 +483,10 @@ nav{
         }
         .package{
             max-width:330px;
-            height: 200px;
-            min-height: 200px;
+            min-height: 180px;
+            height: 180px;
         }
         .package-card{
-            padding: 5px !important;
+            padding-right: 10px !important;
         }
 }
