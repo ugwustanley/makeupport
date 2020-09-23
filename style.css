@@ -209,6 +209,7 @@ nav{
 }
 .about{
     padding: 40px !important;
+    background-color: #bc986a50;
 }
 
 .about h3{
@@ -237,6 +238,7 @@ nav{
 .portfolio{
     padding-left: 50px;
     padding-right: 50px;
+    background-color: #bc986a50;
 }
 
 .portfolio h3{
@@ -244,6 +246,7 @@ nav{
     font-size: 30px;
     font-weight: 500;
     color:#1F252A;
+    margin-bottom: 0px;
 }
 .portfolio{
     min-height:400px;
@@ -254,9 +257,10 @@ nav{
 }
 .portfolio p{
     text-align: center;
-    color: #1F2A25;
-    font-size: 16px;
-    line-height: 18px;
+    color: #1F252A;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 16px;
 }
 .portfolio img{
     width:100%;
@@ -324,7 +328,6 @@ nav{
 
 }
 .packages{
-
     padding:40px;
 }
 .packages > h3{
@@ -333,16 +336,32 @@ nav{
     padding-bottom: 80px;
 }
 .package img{
-    padding-top: 15%;
+    padding-top: 8%;
     padding-bottom: 15%;
-    transform: translateX(50px);
+    transform: translateX(30px);
 }
 .package .img-box{
+    position:relative;
     width: 100% !important;
-    background:linear-gradient(-90deg  ,#3AAFA9  65% , #fff 35%)
+    background:linear-gradient(-90deg  ,#2a2f33fb 60% , transparent 40%)
+}
+.img-box{
+    position:relative;
+    display:block;
+    z-index: 99;
+}
+.img-box::before{
+    content:'';
+    position:absolute;
+    width:89%;
+    height:78%;
+    background-color:#444444;
+    opacity:1.4;
+    top:16%;
+    left:20%;
 }
 .package-card{
-    background: #3AAFA9; 
+    background: #2a2f33fb ; 
 }
 .package{
     
@@ -366,12 +385,14 @@ nav{
     line-height: 25px;
     padding: 20px;
     text-align: left;
+    color: rgba(255, 255, 255, 0.615);
 }
 
 .package-container{
     display: flex;
     justify-content:center;
 }
+
 @keyframes port-anime-2{
     0%{
         height:0px;
@@ -436,7 +457,7 @@ nav{
         font-size: 16px;
     }
     .logo-box{
-        width:80px;
+        width:100px;
         margin-left: 0px !important;
         padding-top: 0px !important;
     }
@@ -477,18 +498,21 @@ nav{
    
 }
 @media (max-width:350px){
+        .img-box::before{
+            left:10%;
+        }
          #animation span{
-        font-size: 18px !important;
+        font-size: 23px !important;
         }
        .hire-btn{
-            font-size:14px;
+            font-size:16px;
         }
     
         .package  h3{
-            font-size: 14px;
+            font-size: 18px;
         }
         .package  p{
-            font-size: 10px;
+            font-size: 14px;
             padding: 0px;
             padding-top: 5px;
             line-height:15px;
@@ -496,33 +520,24 @@ nav{
         }
         .package{
             max-width:330px;
-            min-height: 180px;
-            height: 180px;
+            min-height: 200px;
+           
         }
         .package-card{
             padding-right: 10px !important;
         }
         .about p{
-            font-size: 12px;
             text-align: justify;
         }
-        .about h6{
-            font-size: 12px;
-        }
-        .about h3{
-            font-size: 24px;
-        }
-        .portfolio h3{
-            font-size: 24px;
-        }
         .portfolio p{
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: 500;
+            
         }
         .packages{
             padding: 20px;
         }
         .packages > h3{
-            font-size: 24px;
             padding-bottom: 20px;
         }
 }
